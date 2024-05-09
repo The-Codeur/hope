@@ -1,0 +1,38 @@
+{
+    "name": "galadio/meerkat",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "src/utils/inc/util.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Boot\\": "bootstrap/",
+            "Meerkat\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "The-Codeur",
+        "email": "boubaprogrammer@gmail.com"
+    }],
+    "minimum-stability": "stable",
+    "require": {
+        "php-di/php-di": "^7.0",
+        "vlucas/phpdotenv": "^5.5",
+        "illuminate/database": "^10.7",
+        "illuminate/events": "^10.7",
+        "twig/twig": "^3.5",
+        "intervention/image": "^2.7"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2",
+        "filp/whoops": "^2.15",
+        "fakerphp/faker": "^1.21"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Command\\": "console/Command"
+        }
+    }
+}

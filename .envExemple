@@ -1,0 +1,10 @@
+APP_DEBUG = true
+TEMPLATE_CACHE = false
+
+DB_HOST      = 127.0.0.1
+DB_USERNAME  = root
+DB_PASSWORD  = 
+DB_DATABASE  = your_database_name
+DB_CHARSET   = utf8mb4
+DB_COLLATION = utf8mb4_unicode_ci
+DB_PREFIX    =

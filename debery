@@ -1,0 +1,22 @@
+#!/usr/bin/php
+<?php
+
+use Command\Debery;
+
+require_once __DIR__ . '/bootstrap/app.php';
+
+global $argv;
+
+global $argc;
+
+$debery = new Debery($argv, $argc);
+
+if ($debery->notEmpty() && $debery->getArgv(0) === 'debery') {
+    $debery->unset(0);
+
+    $files = glob(BASE_PATH . 'console' . DS . 'scripts' . DS . '*.php' ?: []);
+
+    array_map(function ($file) use ($debery) {
+        require_once $file;
+    }, $files);
+}
